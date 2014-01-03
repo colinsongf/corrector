@@ -56,3 +56,8 @@ class Corrector():
         candidates = self.known([word]) or self.known(self.edits1(word)) \
             or self.known_edits2(word) or [word]
         return max(candidates, key=lambda w: self.nwords[w])
+
+    def possibilities(self, word):
+        candidates = self.known([word]) or self.known(self.edits1(word)) \
+            or self.known_edits2(word) or [word]
+        return sorted(candidates, key=lambda w: self.nwords[w])
