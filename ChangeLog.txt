@@ -1,5 +1,0 @@
-# corrector changelog
-
-## 2013-10-08
-
-* First public version.
